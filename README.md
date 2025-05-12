@@ -1,4 +1,4 @@
-# Circle the Sound - Kids Word Game
+# Tap the Sound - Kids Word Game
 
 A beautiful, kid-friendly educational game designed to help children develop phonemic awareness and listening skills.
 
