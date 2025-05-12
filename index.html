@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap the Sound - Kids Word Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Tap the Sound</h1>
+            <div class="game-controls">
+                <div class="unit-selector">
+                    <label for="unit-select">Choose Unit:</label>
+                    <select id="unit-select">
+                        <!-- Units will be populated by JavaScript -->
+                    </select>
+                </div>
+                <button id="next-question" class="btn">Next Word</button>
+            </div>
+        </header>
+        
+        <main>
+            <div class="instruction">
+                <p>Listen to the word and circle the correct one!</p>
+                <button id="play-sound" class="sound-btn">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 5L6 9H2V15H6L11 19V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.54 8.46C16.4774 9.39764 17.004 10.6692 17.004 11.995C17.004 13.3208 16.4774 14.5924 15.54 15.53" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19.07 5.93C20.9447 7.80528 21.9979 10.3447 21.9979 13C21.9979 15.6553 20.9447 18.1947 19.07 20.07" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="word-container" id="word-choices">
+                <!-- Word choices will be inserted here by JavaScript -->
+            </div>
+
+            <div class="feedback" id="feedback">
+                <!-- Feedback will be shown here -->
+            </div>
+        </main>
+
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress" id="progress-fill"></div>
+            </div>
+            <p>Score: <span id="score">0</span></p>
+        </div>
+
+        <div class="modal" id="level-complete">
+            <div class="modal-content">
+                <h2>Great Job!</h2>
+                <p>You've completed this level!</p>
+                <div class="stars">
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                </div>
+                <p>Final Score: <span id="final-score">0</span></p>
+                <button id="replay-level" class="btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="level-4-data.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
